@@ -1,0 +1,13 @@
+<template name="chatRoom">
+  <div class="row-fluid">
+    <div class="chat-messages">
+      {{#each messages}}
+        {{> chatMessage}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="input-group">
+    <input type="text" class="form-control" />
+    <span class="input-group-addon">Submit</span>
+  </div>
+</template>
