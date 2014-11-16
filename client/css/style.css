@@ -1,0 +1,58 @@
+/* padding and margin don't increase the max width */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.chat-message {
+  position: relative; 
+  padding: 10px;
+  margin-bottom: 15px;
+
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 1px solid #000000;
+
+  background-color: #f0f0f0;
+
+}
+
+  /* .chat-message:after { */
+  /*   clear: both } */
+
+  .chat-message .message-author {
+    position: relative;
+    display: inline-block;
+    
+    text-align: center;
+  }
+
+  .chat-message .message-author img {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    background: url('http://lorempizza.com/30/30') no-repeat; }
+
+  .chat-message .message-author .author-name {
+    font-size: 10px; }
+
+  .chat-message .message-content {
+    display: inline-block;
+    padding: 5px;
+    color: #aaaaaa; }
+
+  .chat-message .message-content .message-body {
+    font-size: 14px; }
+
+  .chat-message .message-content .message-time {
+    font-size: 10px; }

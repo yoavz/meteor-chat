@@ -1,5 +1,12 @@
 <template name="chatMessage">
   <div class="chat-message">
-    {{body}}
+    <div class="message-author">
+      <img />
+      <div class="author-name">{{author}}</div>
+    </div>
+    <div class="message-content">
+      <span class="message-body">{{body}}</span>
+      <span class="message-time">{{createdAt}}</span>
+    </div>
   </div>
 </template>
