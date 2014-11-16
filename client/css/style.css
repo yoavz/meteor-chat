@@ -12,15 +12,9 @@ body {
 .chat-message {
   position: relative; 
   padding: 10px;
-  margin-bottom: 15px;
-
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border: 1px solid #000000;
+  margin-bottom: 5px;
 
   background-color: #f0f0f0;
-
 }
 
   /* .chat-message:after { */
@@ -34,8 +28,6 @@ body {
   }
 
   .chat-message .message-author img {
-    margin-right: 5px;
-    margin-bottom: 5px;
     width: 30px;
     height: 30px;
     border-radius: 15px;
@@ -48,11 +40,13 @@ body {
 
   .chat-message .message-content {
     display: inline-block;
-    padding: 5px;
-    color: #aaaaaa; }
+    padding-left: 5px;
+    color: black; }
 
   .chat-message .message-content .message-body {
     font-size: 14px; }
 
   .chat-message .message-content .message-time {
+    color: #aaaaaa;
+    font-style: italic;
     font-size: 10px; }

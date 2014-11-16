@@ -2,7 +2,7 @@ Template.chatRoom.events({
   "click #submitMessage": function (e) {
     e.preventDefault();
     
-    var $body = $("#submit-group input").val();
+    var $body = $("#submit-group input")
     
     //TODO: proper error
     if ($body.length === 0 || $body.length > 50)
@@ -10,13 +10,16 @@ Template.chatRoom.events({
 
     messageAttributes = {
       roomId: this.room._id,
-      body: $body,
+      body: $body.val(),
     }
 
     Meteor.call("submitMessage", messageAttributes, function (error, res) {
       // TODO: reasonable error system 
       if (error)
         return console.log(error);
+
+      // clear the textbox
+      $body.val("");
     });
   }  
 });
