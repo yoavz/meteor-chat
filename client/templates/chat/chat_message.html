@@ -1,12 +1,12 @@
 <template name="chatMessage">
-  <div class="chat-message">
+<div class="chat-message {{classes}}">
     <div class="message-author">
-      <img />
+      {{> pokemonIcon iconObject }}
       <div class="author-name">{{author}}</div>
     </div>
     <div class="message-content">
-      <span class="message-body">{{body}}</span>
-      <span class="message-time">{{createdAt}}</span>
+      <div class="message-body">{{body}}</div>
+      <div class="message-time">{{prettyTime}}</div>
     </div>
   </div>
 </template>

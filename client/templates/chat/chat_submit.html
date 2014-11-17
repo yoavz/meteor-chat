@@ -1,0 +1,23 @@
+<template name="chatSubmit">
+<form class="message-form">
+  <div class="input-group chat-submit" id="submit-group">
+    <div class="input-group-btn dropup">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <span class="icon-name">{{> pokemonIcon icon}}</span>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        {{#each allIcons}}
+          <li><a>
+            <div>{{> pokemonIcon}}</div>
+          </a></li>
+        {{/each}}
+      </ul>
+    </div>
+    <input type="text" class="form-control" />
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-default" id="submitMessage">Submit</button>
+    </div>
+  </div>
+</form>
+</template>

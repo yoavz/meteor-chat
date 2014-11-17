@@ -6,34 +6,60 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Georgia, Serif;
+  height: 100%;
 }
+
+  .chat-area .chat-messages {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    background-color: #f0ebe2;
+    padding: 10px;
+  }
+  
+  .chat-area .chat-submit {
+    padding: 10px;
+  }
+
+  /* hide messages but still take up space */
+  .chat-area .hidden {
+    display: block !important;
+    visibility: hidden !important;
+  }
+
+  .chat-area .chat-empty {
+    position: absolute;
+    text-align: center;
+
+    color: black;
+    font-size: 14px;
+  }
 
 .chat-message {
   position: relative; 
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 5px;
-
-  background-color: #f0f0f0;
 }
-
-  /* .chat-message:after { */
-  /*   clear: both } */
 
   .chat-message .message-author {
     position: relative;
     display: inline-block;
-    
     text-align: center;
+    vertical-align: top;
   }
 
-  .chat-message .message-author img {
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    background: url('http://lorempizza.com/30/30') no-repeat; }
+  /* .chat-message .message-author img { */
+  /*   background: url('img/pokemon.png') no-repeat -28px -30px; */
+  /*   width: 35px; */
+  /*   height: 33px; */
+  /*  */
+  /*   border-radius: 15px; */
+  /*   -webkit-border-radius: 15px; */
+  /*   -moz-border-radius: 15px; */
+  /* } */
+
 
   .chat-message .message-author .author-name {
     font-size: 10px; }
@@ -44,9 +70,32 @@ body {
     color: black; }
 
   .chat-message .message-content .message-body {
-    font-size: 14px; }
+    position: relative;
+    font-size: 14px; 
+  }
 
   .chat-message .message-content .message-time {
     color: #aaaaaa;
     font-style: italic;
     font-size: 10px; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.sprite {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
