@@ -8,23 +8,23 @@ Template.chatSubmit.helpers({
   allIcons: function () {
     return _.values(ICONS_MAP);  
   },
-
 });
 
 Template.chatSubmit.events({
   "submit .message-form": function (e) {
     e.preventDefault();
     
-    var $body = $("#submit-group input")
+    var $body = $("#submit-group input");
+    var body = $body.val();
     
     //TODO: proper error
-    if ($body.length === 0 || $body.length > 50)
+    if (body.length === 0 || body.length > 50)
       return console.log("too short or long");
 
     messageAttributes = {
       roomId: this.room._id,
       icon: Session.get("icon-name"),
-      body: $body.val(),
+      body: body,
     }
 
     Meteor.call("submitMessage", messageAttributes, function (error, res) {
@@ -34,13 +34,15 @@ Template.chatSubmit.events({
 
       // clear the textbox
       $body.val("");
+      
+      // if you submit a message
+      // scrollToBottom();
     });
   },
 
   "click .dropdown-menu a": function (e) {
     e.preventDefault();
     var new_icon = $(e.target).attr('value');
-    console.log(new_icon);
     Session.set("icon-name", new_icon);
   }
 });

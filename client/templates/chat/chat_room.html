@@ -1,6 +1,6 @@
 <template name="chatRoom">
 <div class="row">
-  <div class="chat-area col-md-6">
+  <div class="chat-area col-md-12">
     <div class="chat-messages">
       {{#if empty}}
         <div class="chat-empty">{{ emptyMessage }}</div>
@@ -11,8 +11,8 @@
     </div>
     {{> chatSubmit}}
   </div>
-  <div class="video-area col-md-6">
-    {{> youtubeVideo}}
-  </div>
+  <!-- <div class="video&#45;area col&#45;md&#45;6"> -->
+  <!--   {{> youtubeVideo}} -->
+  <!-- </div> -->
 </div>
 </template>
