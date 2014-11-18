@@ -36,7 +36,7 @@ Template.chatSubmit.events({
       $body.val("");
       
       // if you submit a message
-      // scrollToBottom();
+      scrollToBottom();
     });
   },
 

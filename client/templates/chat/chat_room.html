@@ -1,7 +1,7 @@
 <template name="chatRoom">
 <div class="row">
   <div class="chat-area col-md-12">
-    <div class="chat-messages">
+    <div class="chat-messages" style="height: {{height}}px;">
       {{#if empty}}
         <div class="chat-empty">{{ emptyMessage }}</div>
       {{/if}}

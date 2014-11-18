@@ -1,5 +1,6 @@
-MESSAGE_HEIGHT = 45;
 MESSAGE_NUM = 10;
+MESSAGE_HEIGHT = 45;
+CHAT_HEIGHT = 2*10 + MESSAGE_HEIGHT * (MESSAGE_NUM+1)
 
 Template.chatRoom.rendered = function () {
   // on load, we should scroll to the bottom
@@ -15,16 +16,17 @@ Template.chatRoom.helpers({
       messages.unshift({empty: true, body: "p"});
     }
 
-    // keep scrolling to the bottom
-    setTimeout(50, function () {
-      scrollToBottom();
-    });
+    // wait for 100ms to load messages into DOM
+    // then, scroll to the bottom 
+      setTimeout(function () {
+        scrollToBottom();
+      }, 100);
 
     return messages;
   },
 
   height: function () {
-    return MESSAGE_HEIGHT * MESSAGE_NUM;
+    return CHAT_HEIGHT;
   },
 
   empty: function () {
