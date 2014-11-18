@@ -18,9 +18,9 @@ Template.chatRoom.helpers({
 
     // wait for 100ms to load messages into DOM
     // then, scroll to the bottom 
-      setTimeout(function () {
-        scrollToBottom();
-      }, 100);
+    setTimeout(function () {
+      scrollToBottom();
+    }, 100);
 
     return messages;
   },

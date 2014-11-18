@@ -1,7 +1,9 @@
+Template.chatSubmit.created = function () {
+  Session.set("icon-name", randomIcon());
+};
+
 Template.chatSubmit.helpers({
   icon: function () {
-    if (! Session.get("icon-name"))
-      Session.set("icon-name", DEFAULT_ICON);
     return ICONS_MAP[Session.get("icon-name")]
   },
   
