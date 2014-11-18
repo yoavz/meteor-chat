@@ -10,6 +10,26 @@ body {
   height: 100%;
 }
 
+/* ---------- */
+/* HOME PAGE  */
+/* ---------- */
+
+.trending-videos {
+  display: relative;
+}
+
+.trending-video {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+
+
+/* ---------- */
+/* CHAT STUFF */
+/* ---------- */
+
   .chat-area .chat-messages {
     /* ensure scrolling */
     overflow: auto;
@@ -53,17 +73,6 @@ body {
     vertical-align: top;
   }
 
-  /* .chat-message .message-author img { */
-  /*   background: url('img/pokemon.png') no-repeat -28px -30px; */
-  /*   width: 35px; */
-  /*   height: 33px; */
-  /*  */
-  /*   border-radius: 15px; */
-  /*   -webkit-border-radius: 15px; */
-  /*   -moz-border-radius: 15px; */
-  /* } */
-
-
   .chat-message .message-author .author-name {
     font-size: 10px; }
 
@@ -101,12 +110,6 @@ body {
 .chat-submit .input-container {
   display: table-cell;
   vertical-align: middle;
-}
-
-.sprite {
-  /* border-radius: 15px; */
-  /* -webkit-border-radius: 15px; */
-  /* -moz-border-radius: 15px; */
 }
 
 .input-group .input-group-addon {

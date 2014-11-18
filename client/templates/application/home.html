@@ -1,5 +1,33 @@
 <template name="home">
-<div style="width:100px; text-align:center;">
-  <button id="makeChat" type="button" class="btn btn-default">Create a Chat Room</button>
-</div>
+  {{> goToChat }}
+  {{> trendingVideos }}
+</template>
+
+<template name="goToChat">
+  <div class="go-to-container">
+    <h3>Enter youtube URL here</h3>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Youtube URL goes here" />
+      <div class="input-group-btn">
+        <button id="makeChat" type="button" class="btn btn-default">Create a Chat Room</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="trendingVideos">
+  <div class="trending-videos-container">
+    <h3>Or, check out these active rooms</h3> 
+    <div class="trending-videos">
+      {{> trendingVideo }}
+      {{> trendingVideo }}
+      {{> trendingVideo }}
+    </div>
+  </div>
+</template>
+
+<template name="trendingVideo">
+  <div class="trending-video">
+    {{> youtubeVideo }} 
+  </div>
 </template>
