@@ -42,7 +42,7 @@ Template.chatSubmit.events({
     });
   },
 
-  "click .dropdown-menu a": function (e) {
+  "click .dropdown-menu .sprite": function (e) {
     e.preventDefault();
     var new_icon = $(e.target).attr('value');
     Session.set("icon-name", new_icon);

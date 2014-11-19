@@ -14,15 +14,15 @@ body {
 /* HOME PAGE  */
 /* ---------- */
 
-.trending-videos {
-  display: relative;
+.go-to-container {
+  text-align: center;
 }
 
-.trending-video {
-  display: inline-block;
-  width: 300px;
-  height: 200px;
-  margin: 10px;
+.trending-video p {
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+  padding: 5px 0px;
 }
 
 
@@ -45,6 +45,11 @@ body {
   .chat-area .chat-submit {
     padding: 10px;
   }
+
+  .chat-area .chat-submit .dropdown-menu {
+    min-width: 60px !important;
+  }
+
   
   /* hide messages but still take up space */
   .chat-area .hidden {

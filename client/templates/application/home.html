@@ -5,7 +5,7 @@
 
 <template name="goToChat">
   <div class="go-to-container">
-    <h3>Enter youtube URL here</h3>
+    <h2>Enter youtube URL here</h2>
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Youtube URL goes here" />
       <div class="input-group-btn">
@@ -17,8 +17,8 @@
 
 <template name="trendingVideos">
   <div class="trending-videos-container">
-    <h3>Or, check out these active rooms</h3> 
-    <div class="trending-videos">
+    <h2>Or, check out these active rooms</h2> 
+    <div class="trending-videos row">
       {{> trendingVideo }}
       {{> trendingVideo }}
       {{> trendingVideo }}
@@ -27,7 +27,9 @@
 </template>
 
 <template name="trendingVideo">
-  <div class="trending-video">
+  <div class="trending-video col-md-4 col-sm-12">
+    <h3>Title</h3>
     {{> youtubeVideo }} 
+    <p>N chatters</p>
   </div>
 </template>
